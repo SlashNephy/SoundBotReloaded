@@ -73,7 +73,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/opus@npm:^0.7.0":
+"@discordjs/opus@npm:0.7.0":
   version: 0.7.0
   resolution: "@discordjs/opus@npm:0.7.0"
   dependencies:
@@ -97,7 +97,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/voice@npm:^0.10.0":
+"@discordjs/voice@npm:0.10.0":
   version: 0.10.0
   resolution: "@discordjs/voice@npm:0.10.0"
   dependencies:
@@ -2527,7 +2527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"levenshtein-edit-distance@npm:^3.0.0":
+"levenshtein-edit-distance@npm:3.0.0":
   version: 3.0.0
   resolution: "levenshtein-edit-distance@npm:3.0.0"
   bin:
@@ -3473,7 +3473,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sodium-native@npm:^3.3.0":
+"sodium-native@npm:3.3.0":
   version: 3.3.0
   resolution: "sodium-native@npm:3.3.0"
   dependencies:
@@ -3487,9 +3487,9 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "soundbot-reloaded@workspace:."
   dependencies:
-    "@discordjs/opus": ^0.7.0
+    "@discordjs/opus": 0.7.0
     "@discordjs/rest": 0.5.0
-    "@discordjs/voice": ^0.10.0
+    "@discordjs/voice": 0.10.0
     "@slashnephy/eslint-config": 0.1.7
     "@slashnephy/prettier-config": 0.1.1
     "@slashnephy/typescript-extension": 0.2.0
@@ -3500,10 +3500,10 @@ __metadata:
     discord.js: 13.8.1
     dotenv: 16.0.1
     eslint: 8.18.0
-    levenshtein-edit-distance: ^3.0.0
+    levenshtein-edit-distance: 3.0.0
     node-fetch: 3.2.6
     prettier: 2.7.1
-    sodium-native: ^3.3.0
+    sodium-native: 3.3.0
     ts-node: 10.8.1
     typescript: 4.7.4
   languageName: unknown
