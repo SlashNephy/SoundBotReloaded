@@ -1,0 +1,13 @@
+.git
+.github
+.idea
+node_modules
+
+.dockerignore
+.env
+.env.example
+.gitignore
+Dockerfile
+LICENSE
+README.md
+renovate.json
