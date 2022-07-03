@@ -1,16 +1,21 @@
 import { createReadStream } from 'fs'
+import { readdir } from 'fs/promises'
 import { join } from 'path'
 
 import {
+  AudioPlayerStatus,
   createAudioPlayer,
   createAudioResource,
   demuxProbe,
+  entersState,
   generateDependencyReport,
   getVoiceConnection,
+  getVoiceConnections,
   joinVoiceChannel,
   NoSubscriberBehavior,
   VoiceConnectionStatus,
 } from '@discordjs/voice'
+import '@slashnephy/typescript-extension'
 import { existsAsync } from '@slashnephy/typescript-extension/dist/node/fs/exists'
 import { GatewayIntentBits } from 'discord-api-types/v10'
 import { Client } from 'discord.js'
@@ -29,6 +34,14 @@ client.on('ready', () => {
   console.info(`Logged in as ${client.user?.tag}`)
 })
 
+process.on('exit', () => {
+  for (const [_, connection] of getVoiceConnections()) {
+    connection.destroy()
+  }
+
+  client.destroy()
+})
+
 client.on('messageCreate', async (message) => {
   if (!message.guildId) {
     return
@@ -38,15 +51,24 @@ client.on('messageCreate', async (message) => {
     return
   }
 
-  const sound = message.content.slice(1)
-
   const channel = message.member?.voice.channel
   if (!channel) {
     // 投稿者が VC に入っていない場合は無視
     return
   }
 
-  const resource = await findSound(sound, message.guildId)
+  const sound = message.content.slice(1)
+
+  let resource: AudioResource | null
+  switch (sound) {
+    case 'r':
+    case 'random':
+      resource = await chooseRandomSound(message.guildId)
+      break
+    default:
+      resource = await findSound(sound, message.guildId)
+  }
+
   if (!resource) {
     // 音声ファイルが見つからない場合は無視
     return
@@ -55,8 +77,27 @@ client.on('messageCreate', async (message) => {
   await playAudio(resource, channel)
 })
 
+const SOUND_EXTENSIONS = ['mp3', 'wav', 'ogg', 'flac', 'm4a', 'aac']
+
+const loadAudioResource = async (path: string, name: string): Promise<AudioResource> => {
+  const readableStream = createReadStream(path)
+  const { stream, type } = await demuxProbe(readableStream)
+
+  const resource = createAudioResource(stream, {
+    inputType: type,
+    inlineVolume: true,
+    metadata: {
+      title: name,
+    },
+  })
+  resource.volume?.setVolume(parseFloat(env.INITIAL_VOLUME))
+
+  console.info(`Found sound: ${name} (${path})`)
+
+  return resource
+}
+
 const findSound = async (name: string, guildId: string): Promise<AudioResource | null> => {
-  const SOUND_EXTENSIONS = ['mp3', 'wav', 'ogg', 'flac', 'm4a', 'aac']
   const paths = SOUND_EXTENSIONS.map((ext) => join(__dirname, env.SOUNDS_DIRECTORY, guildId, `${name}.${ext}`))
 
   for (const path of paths) {
@@ -64,29 +105,26 @@ const findSound = async (name: string, guildId: string): Promise<AudioResource |
       continue
     }
 
-    const readableStream = createReadStream(path)
-    const { stream, type } = await demuxProbe(readableStream)
-
-    const resource = createAudioResource(stream, {
-      inputType: type,
-      inlineVolume: true,
-      metadata: {
-        title: name,
-      },
-    })
-    resource.volume?.setVolume(parseFloat(env.INITIAL_VOLUME))
-
-    console.info(`Found sound: ${name} (${path})`)
-
-    return resource
+    return await loadAudioResource(path, name)
   }
 
   return null
 }
 
+const chooseRandomSound = async (guildId: string): Promise<AudioResource | null> => {
+  const directory = join(__dirname, env.SOUNDS_DIRECTORY, guildId)
+  if (!(await existsAsync(directory))) {
+    return null
+  }
+
+  const paths = await readdir(directory)
+  const path = paths.filter((path) => SOUND_EXTENSIONS.some((ext) => path.endsWith(`.${ext}`))).random()
+  return await loadAudioResource(join(directory, path), path.split('.').slice(0, -1).join('.'))
+}
+
 const getOrCreateVoiceConnection = async (channel: VoiceBasedChannel): Promise<VoiceConnection> => {
   const existing = getVoiceConnection(channel.guildId)
-  if (existing) {
+  if (existing && existing.state.status === VoiceConnectionStatus.Ready) {
     console.debug(
       `Using existing VoiceConnection for [channel = ${channel.name} (${channel.id}), guild = ${channel.guild.name} (${channel.guildId})]`
     )
@@ -123,16 +161,33 @@ const playAudio = async (resource: AudioResource, channel: VoiceBasedChannel) =>
     )
   }
 
+  const voice = await getOrCreateVoiceConnection(channel)
+  voice.on(VoiceConnectionStatus.Disconnected, async () => {
+    // https://discordjs.guide/voice/voice-connections.html#handling-disconnects
+    try {
+      await Promise.race([
+        entersState(voice, VoiceConnectionStatus.Signalling, 5_000),
+        entersState(voice, VoiceConnectionStatus.Connecting, 5_000),
+      ])
+    } catch (error) {
+      console.error(error)
+      voice.destroy()
+    }
+  })
+
   const player = createAudioPlayer({
-    debug: true,
     behaviors: {
       noSubscriber: NoSubscriberBehavior.Stop,
     },
   })
-  player.play(resource)
 
-  const voice = await getOrCreateVoiceConnection(channel)
-  voice.subscribe(player)
+  const subscription = voice.subscribe(player)
+  if (subscription) {
+    setTimeout(() => subscription.unsubscribe(), 5_000)
+  }
+
+  player.play(resource)
+  await entersState(player, AudioPlayerStatus.Playing, 5_000)
 }
 
 client.login(env.DISCORD_TOKEN).catch(console.error)

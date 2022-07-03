@@ -33,6 +33,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@derhuerst/http-basic@npm:^8.2.0":
+  version: 8.2.3
+  resolution: "@derhuerst/http-basic@npm:8.2.3"
+  dependencies:
+    caseless: ^0.12.0
+    concat-stream: ^1.6.2
+    http-response-object: ^3.0.1
+    parse-cache-control: ^1.0.1
+  checksum: 454615ee0ab0631c11a5fbc58837fb1117bfd82a4ce2b019c79c9da1fe838dae5d3e1707adff61527a923cbf5e220902d7209c3e2fc13274ed9b31170db15696
+  languageName: node
+  linkType: hard
+
 "@discordjs/builders@npm:^0.14.0":
   version: 0.14.0
   resolution: "@discordjs/builders@npm:0.14.0"
@@ -247,6 +259,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@prisma/client@npm:4.0.0":
+  version: 4.0.0
+  resolution: "@prisma/client@npm:4.0.0"
+  dependencies:
+    "@prisma/engines-version": 3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11
+  peerDependencies:
+    prisma: "*"
+  peerDependenciesMeta:
+    prisma:
+      optional: true
+  checksum: 93cd563881e15092303697e1c8177bcfaea6ec8f4ce48950f57bc9b74dd7ffd3929a8c5ad8130457fb8c1b889cad0799cbb928e39e2ebf37310daf41e9cb8312
+  languageName: node
+  linkType: hard
+
+"@prisma/engines-version@npm:3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11":
+  version: 3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11
+  resolution: "@prisma/engines-version@npm:3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11"
+  checksum: edea5a5189bad83e4cfa4d98543d9d437ab0d505826d202415d5ed9ac893d1cd3e6b89b01ddfd059f61799945cc69c9b2b8e4bc7a93e1be0ac458ab1bc04ba93
+  languageName: node
+  linkType: hard
+
+"@prisma/engines@npm:3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11":
+  version: 3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11
+  resolution: "@prisma/engines@npm:3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11"
+  checksum: 0738eb730da2a4c6d77fb9f104a951731a975dd5ca7317637081c38f377c65b39f0a0b8db23ffe40390279f39aca2cde467aba14fb1acd6398ff01dc256f0033
+  languageName: node
+  linkType: hard
+
 "@rushstack/eslint-patch@npm:^1.1.3":
   version: 1.1.4
   resolution: "@rushstack/eslint-patch@npm:1.1.4"
@@ -318,12 +358,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/typescript-extension@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@slashnephy/typescript-extension@npm:0.2.0"
+"@slashnephy/typescript-extension@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@slashnephy/typescript-extension@npm:0.2.2"
   peerDependencies:
     typescript: ^4
-  checksum: 6fff2615bc77a30a9cb7811e8d0be59e4e6539d6ebb4d0b4fc6765045a2c43ad3a6b5a4d41f9c263f475701ccf6c4395be4c921a7387b5d576096d130c3cf588
+  checksum: efd61c71af901ba92c31234875880dad91e3be2429f0fd87f4e1183ceb9cb6aef6309a4ef3377045afd66cf2f55611dbdd2e9910afecd4480452965b449e7291
   languageName: node
   linkType: hard
 
@@ -397,6 +437,13 @@ __metadata:
   version: 17.0.36
   resolution: "@types/node@npm:17.0.36"
   checksum: 11055fde0a1e1421113849b5e32c7022911efc0be670729947bf0162970e79962d804b1eb8a9afb291380cac97cf0e684511415d586ae5fe1560322c940fe188
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:^10.0.3":
+  version: 10.17.60
+  resolution: "@types/node@npm:10.17.60"
+  checksum: 2cdb3a77d071ba8513e5e8306fa64bf50e3c3302390feeaeff1fd325dd25c8441369715dfc8e3701011a72fed5958c7dfa94eb9239a81b3c286caa4d97db6eef
   languageName: node
   linkType: hard
 
@@ -859,6 +906,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"buffer-from@npm:^1.0.0":
+  version: 1.1.2
+  resolution: "buffer-from@npm:1.1.2"
+  checksum: 0448524a562b37d4d7ed9efd91685a5b77a50672c556ea254ac9a6d30e3403a517d8981f10e565db24e8339413b43c97ca2951f10e399c6125a0d8911f5679bb
+  languageName: node
+  linkType: hard
+
 "cacache@npm:^16.1.0":
   version: 16.1.1
   resolution: "cacache@npm:16.1.1"
@@ -899,6 +953,13 @@ __metadata:
   version: 3.1.0
   resolution: "callsites@npm:3.1.0"
   checksum: 072d17b6abb459c2ba96598918b55868af677154bec7e73d222ef95a8fdb9bbf7dae96a8421085cdad8cd190d86653b5b6dc55a4484f2e5b2e27d5e0c3fc15b3
+  languageName: node
+  linkType: hard
+
+"caseless@npm:^0.12.0":
+  version: 0.12.0
+  resolution: "caseless@npm:0.12.0"
+  checksum: b43bd4c440aa1e8ee6baefee8063b4850fd0d7b378f6aabc796c9ec8cb26d27fb30b46885350777d9bd079c5256c0e1329ad0dc7c2817e0bb466810ebb353751
   languageName: node
   linkType: hard
 
@@ -978,6 +1039,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"concat-stream@npm:^1.6.2":
+  version: 1.6.2
+  resolution: "concat-stream@npm:1.6.2"
+  dependencies:
+    buffer-from: ^1.0.0
+    inherits: ^2.0.3
+    readable-stream: ^2.2.2
+    typedarray: ^0.0.6
+  checksum: 1ef77032cb4459dcd5187bd710d6fc962b067b64ec6a505810de3d2b8cc0605638551b42f8ec91edf6fcd26141b32ef19ad749239b58fae3aba99187adc32285
+  languageName: node
+  linkType: hard
+
 "concurrently@npm:7.2.2":
   version: 7.2.2
   resolution: "concurrently@npm:7.2.2"
@@ -1008,6 +1081,13 @@ __metadata:
   version: 3.23.3
   resolution: "core-js-pure@npm:3.23.3"
   checksum: 09a477a56963ca4409ca383d36429ea3b51b658ff85e94331a510543c77c4d1b44cb6b305b0f185d729eb059c71f1289c62fdec6371ff46ce838a16988cdcb2e
+  languageName: node
+  linkType: hard
+
+"core-util-is@npm:~1.0.0":
+  version: 1.0.3
+  resolution: "core-util-is@npm:1.0.3"
+  checksum: 9de8597363a8e9b9952491ebe18167e3b36e7707569eed0ebf14f8bba773611376466ae34575bca8cfe3c767890c859c74056084738f09d4e4a6f902b2ad7d99
   languageName: node
   linkType: hard
 
@@ -1808,6 +1888,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"ffmpeg-static@npm:5.0.2":
+  version: 5.0.2
+  resolution: "ffmpeg-static@npm:5.0.2"
+  dependencies:
+    "@derhuerst/http-basic": ^8.2.0
+    env-paths: ^2.2.0
+    https-proxy-agent: ^5.0.0
+    progress: ^2.0.3
+  checksum: 58eb5eb6e4cfd393b5978aa317c887ff190db5dde68440550d063411e0ec5d1da9d58cd58a47740674a2be554900884d007f5a84b18349f10bc55cba3cb549be
+  languageName: node
+  linkType: hard
+
 "file-entry-cache@npm:^6.0.1":
   version: 6.0.1
   resolution: "file-entry-cache@npm:6.0.1"
@@ -2189,6 +2281,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"http-response-object@npm:^3.0.1":
+  version: 3.0.2
+  resolution: "http-response-object@npm:3.0.2"
+  dependencies:
+    "@types/node": ^10.0.3
+  checksum: 6cbdcb4ce7b27c9158a131b772c903ed54add2ba831e29cc165e91c3969fa6f8105ddf924aac5b954b534ad15a1ae697b693331b2be5281ee24d79aae20c3264
+  languageName: node
+  linkType: hard
+
 "https-proxy-agent@npm:^5.0.0":
   version: 5.0.1
   resolution: "https-proxy-agent@npm:5.0.1"
@@ -2265,7 +2366,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"inherits@npm:2, inherits@npm:^2.0.3":
+"inherits@npm:2, inherits@npm:^2.0.3, inherits@npm:~2.0.3":
   version: 2.0.4
   resolution: "inherits@npm:2.0.4"
   checksum: 4a48a733847879d6cf6691860a6b1e3f0f4754176e4d71494c41f3475553768b10f84b5ce1d40fbd0e34e6bfbb864ee35858ad4dd2cf31e02fc4a154b724d7f1
@@ -2448,6 +2549,13 @@ __metadata:
   dependencies:
     is-docker: ^2.0.0
   checksum: 20849846ae414997d290b75e16868e5261e86ff5047f104027026fd61d8b5a9b0b3ade16239f35e1a067b3c7cc02f70183cb661010ed16f4b6c7c93dad1b19d8
+  languageName: node
+  linkType: hard
+
+"isarray@npm:~1.0.0":
+  version: 1.0.0
+  resolution: "isarray@npm:1.0.0"
+  checksum: f032df8e02dce8ec565cf2eb605ea939bdccea528dbcf565cdf92bfa2da9110461159d86a537388ef1acef8815a330642d7885b29010e8f7eac967c9993b65ab
   languageName: node
   linkType: hard
 
@@ -3069,6 +3177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"parse-cache-control@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "parse-cache-control@npm:1.0.1"
+  checksum: 5a70868792124eb07c2dd07a78fcb824102e972e908254e9e59ce59a4796c51705ff28196d2b20d3b7353d14e9f98e65ed0e4eda9be072cc99b5297dc0466fee
+  languageName: node
+  linkType: hard
+
 "path-exists@npm:^3.0.0":
   version: 3.0.0
   resolution: "path-exists@npm:3.0.0"
@@ -3155,6 +3270,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"prisma@npm:4.0.0":
+  version: 4.0.0
+  resolution: "prisma@npm:4.0.0"
+  dependencies:
+    "@prisma/engines": 3.16.0-49.da41d2bb3406da22087b849f0e911199ba4fbf11
+  bin:
+    prisma: build/index.js
+    prisma2: build/index.js
+  checksum: aef399c6b265fe892112ffc3ade0e5e50804fef982c4162f976a9c370e09e17235541a6f371255ec6c2ada332ef8b8db5e21f0f47f09befed133984a0c00f0c0
+  languageName: node
+  linkType: hard
+
+"process-nextick-args@npm:~2.0.0":
+  version: 2.0.1
+  resolution: "process-nextick-args@npm:2.0.1"
+  checksum: 1d38588e520dab7cea67cbbe2efdd86a10cc7a074c09657635e34f035277b59fbb57d09d8638346bf7090f8e8ebc070c96fa5fd183b777fff4f5edff5e9466cf
+  languageName: node
+  linkType: hard
+
+"progress@npm:^2.0.3":
+  version: 2.0.3
+  resolution: "progress@npm:2.0.3"
+  checksum: f67403fe7b34912148d9252cb7481266a354bd99ce82c835f79070643bb3c6583d10dbcfda4d41e04bbc1d8437e9af0fb1e1f2135727878f5308682a579429b7
+  languageName: node
+  linkType: hard
+
 "promise-inflight@npm:^1.0.1":
   version: 1.0.1
   resolution: "promise-inflight@npm:1.0.1"
@@ -3201,6 +3342,21 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
+  languageName: node
+  linkType: hard
+
+"readable-stream@npm:^2.2.2":
+  version: 2.3.7
+  resolution: "readable-stream@npm:2.3.7"
+  dependencies:
+    core-util-is: ~1.0.0
+    inherits: ~2.0.3
+    isarray: ~1.0.0
+    process-nextick-args: ~2.0.0
+    safe-buffer: ~5.1.1
+    string_decoder: ~1.1.1
+    util-deprecate: ~1.0.1
+  checksum: e4920cf7549a60f8aaf694d483a0e61b2a878b969d224f89b3bc788b8d920075132c4b55a7494ee944c7b6a9a0eada28a7f6220d80b0312ece70bbf08eeca755
   languageName: node
   linkType: hard
 
@@ -3349,6 +3505,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"safe-buffer@npm:~5.1.0, safe-buffer@npm:~5.1.1":
+  version: 5.1.2
+  resolution: "safe-buffer@npm:5.1.2"
+  checksum: f2f1f7943ca44a594893a852894055cf619c1fbcb611237fc39e461ae751187e7baf4dc391a72125e0ac4fb2d8c5c0b3c71529622e6a58f46b960211e704903c
+  languageName: node
+  linkType: hard
+
 "safe-buffer@npm:~5.2.0":
   version: 5.2.1
   resolution: "safe-buffer@npm:5.2.1"
@@ -3490,9 +3653,10 @@ __metadata:
     "@discordjs/opus": 0.7.0
     "@discordjs/rest": 0.5.0
     "@discordjs/voice": 0.10.0
+    "@prisma/client": 4.0.0
     "@slashnephy/eslint-config": 0.1.7
     "@slashnephy/prettier-config": 0.1.1
-    "@slashnephy/typescript-extension": 0.2.0
+    "@slashnephy/typescript-extension": 0.2.2
     "@types/node": 17.0.36
     "@types/prettier": 2.6.3
     concurrently: 7.2.2
@@ -3500,9 +3664,11 @@ __metadata:
     discord.js: 13.8.1
     dotenv: 16.0.1
     eslint: 8.19.0
+    ffmpeg-static: 5.0.2
     levenshtein-edit-distance: 3.0.0
     node-fetch: 3.2.6
     prettier: 2.7.1
+    prisma: 4.0.0
     sodium-native: 3.3.0
     ts-node: 10.8.2
     typescript: 4.7.4
@@ -3580,6 +3746,15 @@ __metadata:
   dependencies:
     safe-buffer: ~5.2.0
   checksum: 8417646695a66e73aefc4420eb3b84cc9ffd89572861fe004e6aeb13c7bc00e2f616247505d2dbbef24247c372f70268f594af7126f43548565c68c117bdeb56
+  languageName: node
+  linkType: hard
+
+"string_decoder@npm:~1.1.1":
+  version: 1.1.1
+  resolution: "string_decoder@npm:1.1.1"
+  dependencies:
+    safe-buffer: ~5.1.0
+  checksum: 9ab7e56f9d60a28f2be697419917c50cac19f3e8e6c28ef26ed5f4852289fe0de5d6997d29becf59028556f2c62983790c1d9ba1e2a3cc401768ca12d5183a5b
   languageName: node
   linkType: hard
 
@@ -3809,6 +3984,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typedarray@npm:^0.0.6":
+  version: 0.0.6
+  resolution: "typedarray@npm:0.0.6"
+  checksum: 33b39f3d0e8463985eeaeeacc3cb2e28bc3dfaf2a5ed219628c0b629d5d7b810b0eb2165f9f607c34871d5daa92ba1dc69f49051cf7d578b4cbd26c340b9d1b1
+  languageName: node
+  linkType: hard
+
 "typescript@npm:4.7.4":
   version: 4.7.4
   resolution: "typescript@npm:4.7.4"
@@ -3875,7 +4057,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"util-deprecate@npm:^1.0.1":
+"util-deprecate@npm:^1.0.1, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
   checksum: 474acf1146cb2701fe3b074892217553dfcf9a031280919ba1b8d651a068c9b15d863b7303cb15bd00a862b498e6cf4ad7b4a08fb134edd5a6f7641681cb54a2
