@@ -2,8 +2,6 @@ import dotenv from 'dotenv'
 
 export type EnvConfig = {
   DISCORD_TOKEN: string
-  DISCORD_VOICE_CHANNEL_ID: string
-  DISCORD_TEXT_CHANNEL_ID: string
   SOUNDS_DIRECTORY: string
   INITIAL_VOLUME: string
 }
@@ -26,8 +24,6 @@ const initializeEnv = (): EnvConfig => {
   dotenv.config()
 
   checkEnv('DISCORD_TOKEN')
-  checkEnv('DISCORD_VOICE_CHANNEL_ID')
-  checkEnv('DISCORD_TEXT_CHANNEL_ID')
   setDefaultEnv('SOUNDS_DIRECTORY', 'sounds')
   setDefaultEnv('INITIAL_VOLUME', '1.0')
 
