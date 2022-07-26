@@ -1,21 +1,22 @@
 import { createReadStream } from 'fs'
 
 import {
-  createAudioResource,
-  demuxProbe,
   AudioPlayerStatus,
   createAudioPlayer,
+  createAudioResource,
+  demuxProbe,
   entersState,
   getVoiceConnection,
   joinVoiceChannel,
   NoSubscriberBehavior,
   VoiceConnectionStatus,
 } from '@discordjs/voice'
+import { ChannelType } from 'discord.js'
 
 import { env } from './env'
 
 import type { AudioResource, VoiceConnection } from '@discordjs/voice'
-import type { VoiceBasedChannel } from 'discord.js'
+import type { VoiceBasedChannel, GuildMember } from 'discord.js'
 
 export type AudioMetadata = {
   title: string
@@ -82,9 +83,16 @@ const getOrCreateVoiceConnection = async (channel: VoiceBasedChannel): Promise<V
   })
 }
 
+// なぜか Guild から get me() が欠けているので補完
+declare module 'discord.js' {
+  interface Guild {
+    get me(): GuildMember | null
+  }
+}
+
 export const playAudio = async (resource: AudioResource, channel: VoiceBasedChannel) => {
   // ステージチャンネルではスピーカーリクエストする
-  if (channel.type === 'GUILD_STAGE_VOICE' && channel.guild?.me) {
+  if (channel.type === ChannelType.GuildStageVoice && channel.guild?.me) {
     await channel.guild.me.voice.setRequestToSpeak(true)
     console.info(
       `Requested to speak for [channel = ${channel.name} (${channel.id}), guild = ${channel.guild.name} (${channel.guildId})]`

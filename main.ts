@@ -1,13 +1,18 @@
 import { generateDependencyReport, getVoiceConnections } from '@discordjs/voice'
 import '@slashnephy/typescript-extension'
 import { GatewayIntentBits } from 'discord-api-types/v10'
-import { Client } from 'discord.js'
+import { Client, Message } from 'discord.js'
 
 import { handleSoundCommand } from './lib/bot'
 import { env } from './lib/env'
 
 const client = new Client({
-  intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages, GatewayIntentBits.GuildVoiceStates],
+  intents: [
+    GatewayIntentBits.Guilds,
+    GatewayIntentBits.GuildMessages,
+    GatewayIntentBits.GuildVoiceStates,
+    GatewayIntentBits.MessageContent,
+  ],
 })
 
 client.on('ready', () => {
@@ -23,7 +28,7 @@ process.on('exit', () => {
   client.destroy()
 })
 
-client.on('messageCreate', async (message) => {
+const handleMessage = async (message: Message) => {
   if (!message.guildId) {
     return
   }
@@ -41,6 +46,13 @@ client.on('messageCreate', async (message) => {
   await handleSoundCommand(sound, channel, async (name) => {
     await message.channel?.send(`=> ${name}`)
   })
+}
+
+client.on('messageCreate', handleMessage)
+client.on('messageUpdate', async (_, message) => {
+  if (message instanceof Message) {
+    await handleMessage(message)
+  }
 })
 
 client.login(env.DISCORD_TOKEN).catch(console.error)

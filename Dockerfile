@@ -12,4 +12,4 @@ COPY --from=cache /app/node_modules/ ./node_modules/
 COPY ./ ./
 RUN yarn build
 
-ENTRYPOINT ["yarn", "start"]
+ENTRYPOINT ["node", "./main.js"]
