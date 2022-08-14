@@ -3613,13 +3613,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sodium-native@npm:3.3.0":
-  version: 3.3.0
-  resolution: "sodium-native@npm:3.3.0"
+"sodium-native@npm:3.4.1":
+  version: 3.4.1
+  resolution: "sodium-native@npm:3.4.1"
   dependencies:
     node-gyp: latest
     node-gyp-build: ^4.3.0
-  checksum: 4412bc90155261e2006c979788d3b33e3bdba1c41669c7054a876b8731a68886e1450b356791abd2c4e7b217d21f50adfdc1e194d8909dd003223195bd8ddc0a
+  checksum: 88f2f8c9ecb3c7952098b667ee3803f24253d72a3b3874b126e0e36b2ac20432e12ad44bde3664024e6d0ae1bc6d24fdebc81273af161e735f2eec22f10d26dd
   languageName: node
   linkType: hard
 
@@ -3643,7 +3643,7 @@ __metadata:
     ffmpeg-static: 5.0.2
     levenshtein-edit-distance: 3.0.0
     prettier: 2.7.1
-    sodium-native: 3.3.0
+    sodium-native: 3.4.1
     ts-node: 10.9.1
     typescript: 4.7.4
   languageName: unknown
