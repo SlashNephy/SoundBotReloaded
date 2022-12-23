@@ -26,7 +26,7 @@
     "sodium-native": "3.4.1"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.2.29",
+    "@slashnephy/eslint-config": "0.2.30",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "18.11.17",
     "@types/prettier": "2.7.2",
