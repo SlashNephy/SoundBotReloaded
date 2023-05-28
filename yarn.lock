@@ -443,12 +443,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/prettier-config@npm:0.1.16":
-  version: 0.1.16
-  resolution: "@slashnephy/prettier-config@npm:0.1.16"
+"@slashnephy/prettier-config@npm:0.1.21":
+  version: 0.1.21
+  resolution: "@slashnephy/prettier-config@npm:0.1.21"
   peerDependencies:
     prettier: ^2
-  checksum: 077b5456f5a419609a70d4628f465482f22f22618a17b66784ff0a3646e2ee6309b416efdcacc178b2c82e62cad67a2d5775e1891537acdd047da8d9af31994a
+  checksum: 621e7090447d0d559ebe4bc0d61616e2c696a2b0175b642cb18bfd88264b550e26bd5d4f6d4c5aef9596df453390c7ac0497cdb20a860d3028399afc25e5aafb
   languageName: node
   linkType: hard
 
@@ -4905,7 +4905,7 @@ __metadata:
     "@discordjs/rest": 1.5.0
     "@discordjs/voice": 0.13.0
     "@slashnephy/eslint-config": 0.4.33
-    "@slashnephy/prettier-config": 0.1.16
+    "@slashnephy/prettier-config": 0.1.21
     "@slashnephy/typescript-extension": 0.2.3
     "@types/node": 18.16.0
     "@types/prettier": 2.7.2
