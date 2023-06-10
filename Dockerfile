@@ -1,11 +1,11 @@
-FROM --platform=$TARGETPLATFORM node:20.3.0-bullseye-slim@sha256:f5fb074ab3704327ec9e406938ad2ed64e83ef292db3cac35e3794490d01c7bf AS cache
+FROM --platform=$TARGETPLATFORM node:20.3.0-bullseye-slim@sha256:f52e0eb0f31863051b56d76d191b283c2b49ac084762eddfeb1afb54791b250b AS cache
 WORKDIR /app
 
 COPY ./.yarn/ ./.yarn/
 COPY ./package.json ./.yarnrc.yml ./yarn.lock ./
 RUN yarn --immutable
 
-FROM --platform=$TARGETPLATFORM node:20.3.0-bullseye-slim@sha256:f5fb074ab3704327ec9e406938ad2ed64e83ef292db3cac35e3794490d01c7bf
+FROM --platform=$TARGETPLATFORM node:20.3.0-bullseye-slim@sha256:f52e0eb0f31863051b56d76d191b283c2b49ac084762eddfeb1afb54791b250b
 WORKDIR /app
 
 COPY --from=cache /app/node_modules/ ./node_modules/
