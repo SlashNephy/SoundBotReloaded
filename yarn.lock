@@ -321,16 +321,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/voice@npm:0.13.0":
-  version: 0.13.0
-  resolution: "@discordjs/voice@npm:0.13.0"
+"@discordjs/voice@npm:0.16.1":
+  version: 0.16.1
+  resolution: "@discordjs/voice@npm:0.16.1"
   dependencies:
-    "@types/ws": ^8.5.3
-    discord-api-types: ^0.37.12
-    prism-media: ^1.3.4
-    tslib: ^2.4.0
-    ws: ^8.9.0
-  checksum: 4d3da879cb58ba82a6f274e7fd9ffc3beb120f48e6aadf767afb4a3539e77f40d40cd62677aaec6e9eb3819f6d3c112837d6fb237388ed3708c79f1f2310b8bc
+    "@types/ws": ^8.5.9
+    discord-api-types: 0.37.61
+    prism-media: ^1.3.5
+    tslib: ^2.6.2
+    ws: ^8.14.2
+  checksum: c8394888ed4f316ef0ccf3f0de3a8e5f299f83877092837c604049934d4200b638b840e3154792cab10d153c026e8bed50e1e4288807a18f1fe32c0725b3fd4c
   languageName: node
   linkType: hard
 
@@ -1358,7 +1358,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/ws@npm:^8.0.0":
+"@types/ws@npm:^8.0.0, @types/ws@npm:^8.5.9":
   version: 8.5.10
   resolution: "@types/ws@npm:8.5.10"
   dependencies:
@@ -3002,6 +3002,13 @@ __metadata:
   dependencies:
     path-type: ^4.0.0
   checksum: fa05e18324510d7283f55862f3161c6759a3f2f8dbce491a2fc14c8324c498286c54282c1f0e933cb930da8419b30679389499b919122952a4f8592362ef4615
+  languageName: node
+  linkType: hard
+
+"discord-api-types@npm:0.37.61":
+  version: 0.37.61
+  resolution: "discord-api-types@npm:0.37.61"
+  checksum: fe33d528e31a6de0bab2afb43d0e058957a6da6cfc4d797943fac83aeb8d07543dc0f85cad3c4e6789cbbac0c7ca49dae5ac465224b129c7acb716097fa0b081
   languageName: node
   linkType: hard
 
@@ -6832,11 +6839,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-media@npm:^1.3.4":
-  version: 1.3.4
-  resolution: "prism-media@npm:1.3.4"
+"prism-media@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "prism-media@npm:1.3.5"
   peerDependencies:
-    "@discordjs/opus": ^0.8.0
+    "@discordjs/opus": ">=0.8.0 <1.0.0"
     ffmpeg-static: ^5.0.2 || ^4.2.7 || ^3.0.0 || ^2.4.0
     node-opus: ^0.3.3
     opusscript: ^0.0.8
@@ -6849,7 +6856,7 @@ __metadata:
       optional: true
     opusscript:
       optional: true
-  checksum: 703be28c87b4694714a52a0ea84516b19d2e62e510d0f204efc074b044ad93dde00241d4b4741c25aa2e27a00e3b472e60ad0f6c94e88710f0827dc63889373a
+  checksum: a4fbe5c91f2aa5aca6e0d7fb72c37627db814f59b2ffd702aced11d4cc6f6f15022a5830df48fc008e805f2d1fe79305e5d1b091307981a0083edf7223418679
   languageName: node
   linkType: hard
 
@@ -7564,7 +7571,7 @@ __metadata:
   dependencies:
     "@discordjs/opus": 0.9.0
     "@discordjs/rest": 1.7.1
-    "@discordjs/voice": 0.13.0
+    "@discordjs/voice": 0.16.1
     "@slashnephy/eslint-config": 2.3.39
     "@slashnephy/prettier-config": 1.0.73
     "@slashnephy/typescript-extension": 0.2.3
@@ -8511,7 +8518,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ws@npm:^8.12.0":
+"ws@npm:^8.12.0, ws@npm:^8.14.2":
   version: 8.16.0
   resolution: "ws@npm:8.16.0"
   peerDependencies:
