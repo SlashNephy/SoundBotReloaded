@@ -6236,14 +6236,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp-build@npm:^4.3.0":
-  version: 4.5.0
-  resolution: "node-gyp-build@npm:4.5.0"
+"node-gyp-build@npm:^4.8.0":
+  version: 4.8.1
+  resolution: "node-gyp-build@npm:4.8.1"
   bin:
     node-gyp-build: bin.js
     node-gyp-build-optional: optional.js
     node-gyp-build-test: build-test.js
-  checksum: d888bae0fb88335f69af1b57a2294a931c5042f36e413d8d364c992c9ebfa0b96ffe773179a5a2c8f04b73856e8634e09cce108dbb9804396d3cc8c5455ff2db
+  checksum: fe6e95da6f4608c1a98655f6bf2fe4e8dd9c877cd13256056a8acaf585cc7f98718823fe9366be11b78c2f332d5a184b00cf07a4af96c9d8fea45f640c019f98
   languageName: node
   linkType: hard
 
@@ -7482,13 +7482,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sodium-native@npm:3.4.1":
-  version: 3.4.1
-  resolution: "sodium-native@npm:3.4.1"
+"sodium-native@npm:4.1.1":
+  version: 4.1.1
+  resolution: "sodium-native@npm:4.1.1"
   dependencies:
     node-gyp: latest
-    node-gyp-build: ^4.3.0
-  checksum: 88f2f8c9ecb3c7952098b667ee3803f24253d72a3b3874b126e0e36b2ac20432e12ad44bde3664024e6d0ae1bc6d24fdebc81273af161e735f2eec22f10d26dd
+    node-gyp-build: ^4.8.0
+  checksum: 45941133773d70d20feb688e98023dcdc6b9fa33084ecd34f4fca66661c9e63587daf761d1ba9d46570564712613a567fd4b4934c6be6445bc49a0afc863c232
   languageName: node
   linkType: hard
 
@@ -7535,7 +7535,7 @@ __metadata:
     ffmpeg-static: 5.2.0
     levenshtein-edit-distance: 3.0.1
     prettier: 3.3.3
-    sodium-native: 3.4.1
+    sodium-native: 4.1.1
     ts-node: 10.9.2
     typescript: 5.1.6
   languageName: unknown
