@@ -247,13 +247,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/opus@npm:0.9.0":
-  version: 0.9.0
-  resolution: "@discordjs/opus@npm:0.9.0"
+"@discordjs/opus@npm:0.10.0":
+  version: 0.10.0
+  resolution: "@discordjs/opus@npm:0.10.0"
   dependencies:
     "@discordjs/node-pre-gyp": ^0.4.5
-    node-addon-api: ^5.0.0
-  checksum: 1bb17efcece86b5d0f025dcb301e87a01c50db3267776b608cc103e3f6fbbb0b0ea4e61dcb5700fbeb27039b50c771db9efc1b7af628b9c2329120f497e1c20e
+    node-addon-api: ^8.1.0
+  checksum: ca297ec37d4d5a871c020f8cfa3439ddbc826f779ba9f5fcc17ee272bd6d4bcc743313a8dd594ed5b015086021ed96980821afb75fdf7d38c01097e732de2ee5
   languageName: node
   linkType: hard
 
@@ -6762,12 +6762,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-addon-api@npm:^5.0.0":
-  version: 5.0.0
-  resolution: "node-addon-api@npm:5.0.0"
+"node-addon-api@npm:^8.1.0":
+  version: 8.3.0
+  resolution: "node-addon-api@npm:8.3.0"
   dependencies:
     node-gyp: latest
-  checksum: 7c5e2043ac37f6108784d94ed73a44ae6d3e68eb968de60680922fc6bc3d17fa69448c0feb4e0c9d3f4c74a0324822e566a8340a56916d9d6f23cb3e85620334
+  checksum: 87fd087f0887e91c5608ac3c99e3f374403074c9cff2c335b061b0c68a183e4cd561fb9a8b0a583f0145c9b7753180b2be0c232ef01bb97796ccf4486c87958a
   languageName: node
   linkType: hard
 
@@ -8224,7 +8224,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "soundbot-reloaded@workspace:."
   dependencies:
-    "@discordjs/opus": 0.9.0
+    "@discordjs/opus": 0.10.0
     "@discordjs/rest": 1.7.1
     "@discordjs/voice": 0.13.0
     "@slashnephy/eslint-config": 2.3.175
