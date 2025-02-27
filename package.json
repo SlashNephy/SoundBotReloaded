@@ -23,7 +23,7 @@
     "dotenv": "16.4.7",
     "ffmpeg-static": "5.2.0",
     "levenshtein-edit-distance": "3.0.1",
-    "sodium-native": "3.4.1"
+    "sodium-native": "4.3.3"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.3.186",
