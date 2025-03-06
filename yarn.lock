@@ -2475,6 +2475,67 @@ __metadata:
   languageName: node
   linkType: hard
 
+"bare-addon-resolve@npm:^1.3.0":
+  version: 1.9.3
+  resolution: "bare-addon-resolve@npm:1.9.3"
+  dependencies:
+    bare-module-resolve: ^1.10.0
+    bare-semver: ^1.0.0
+  peerDependencies:
+    bare-url: "*"
+  peerDependenciesMeta:
+    bare-url:
+      optional: true
+  checksum: 45a68124c2e220c36cd81b157e702239465f0aaf2df2a14ccae85acce364a2b4aea76cecb630401b680eac1c7c3d7f587e2d393f128838e92694ea5523d04834
+  languageName: node
+  linkType: hard
+
+"bare-module-resolve@npm:^1.10.0":
+  version: 1.10.2
+  resolution: "bare-module-resolve@npm:1.10.2"
+  dependencies:
+    bare-semver: ^1.0.0
+  peerDependencies:
+    bare-url: "*"
+  peerDependenciesMeta:
+    bare-url:
+      optional: true
+  checksum: 79fabd59f848d12d2ba4b995f0616ab566d127885d378a292249b4f268e50488fac66a0db4b12be1524ed902480d09b69706b10490da07e9614fa66301c0b6f8
+  languageName: node
+  linkType: hard
+
+"bare-os@npm:^3.0.1":
+  version: 3.5.1
+  resolution: "bare-os@npm:3.5.1"
+  checksum: efa4557079596a572b7d6d4581fcc124d4ff43b61ff8575edb20a19a4fb3011db8699ee379cb02f3416175fa28e820396016bfbef2fbaf3112dcedfc8ae12c5e
+  languageName: node
+  linkType: hard
+
+"bare-path@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "bare-path@npm:3.0.0"
+  dependencies:
+    bare-os: ^3.0.1
+  checksum: 51d559515f332f62cf9c37c38f2640c1b84b5e8c9de454b70baf029f806058cf94c51d6a0dfec0025cc7760f2069dc3e16c82f0d24f4a9ddb18c829bf9c0206d
+  languageName: node
+  linkType: hard
+
+"bare-semver@npm:^1.0.0":
+  version: 1.0.1
+  resolution: "bare-semver@npm:1.0.1"
+  checksum: 3e7c073b2d3decdd73346b18228519f11ff2523de316eac28ca41a9b258a3c2ce826c83ac139fff2b93e10adb508ed80d89ea598b4d2fa1a038555c5a215e62b
+  languageName: node
+  linkType: hard
+
+"bare-url@npm:^2.1.0":
+  version: 2.1.3
+  resolution: "bare-url@npm:2.1.3"
+  dependencies:
+    bare-path: ^3.0.0
+  checksum: 48765e0ebd4d15960c177486b5da3b02969e7fa605e1ee48585cb1c09c89f59f3c0a21a4541acb0896e78770fb5e924775ae317055d137a4c37ad2a44b0bb0cb
+  languageName: node
+  linkType: hard
+
 "brace-expansion@npm:^1.1.7":
   version: 1.1.11
   resolution: "brace-expansion@npm:1.1.11"
@@ -6810,17 +6871,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"node-gyp-build@npm:^4.3.0":
-  version: 4.5.0
-  resolution: "node-gyp-build@npm:4.5.0"
-  bin:
-    node-gyp-build: bin.js
-    node-gyp-build-optional: optional.js
-    node-gyp-build-test: build-test.js
-  checksum: d888bae0fb88335f69af1b57a2294a931c5042f36e413d8d364c992c9ebfa0b96ffe773179a5a2c8f04b73856e8634e09cce108dbb9804396d3cc8c5455ff2db
-  languageName: node
-  linkType: hard
-
 "node-gyp@npm:latest":
   version: 9.0.0
   resolution: "node-gyp@npm:9.0.0"
@@ -7611,6 +7661,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"require-addon@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "require-addon@npm:1.1.0"
+  dependencies:
+    bare-addon-resolve: ^1.3.0
+    bare-url: ^2.1.0
+  checksum: db5a65258c79c3e7218bff83082870754e2bdc3921daa8fa6a19a8310d2441581778fb1b74def81f03356ab0116d98ec3b53cb87bdc78328bf6af4564f699455
+  languageName: node
+  linkType: hard
+
 "require-directory@npm:^2.1.1":
   version: 2.1.1
   resolution: "require-directory@npm:2.1.1"
@@ -8198,13 +8258,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sodium-native@npm:3.4.1":
-  version: 3.4.1
-  resolution: "sodium-native@npm:3.4.1"
+"sodium-native@npm:4.3.3":
+  version: 4.3.3
+  resolution: "sodium-native@npm:4.3.3"
   dependencies:
-    node-gyp: latest
-    node-gyp-build: ^4.3.0
-  checksum: 88f2f8c9ecb3c7952098b667ee3803f24253d72a3b3874b126e0e36b2ac20432e12ad44bde3664024e6d0ae1bc6d24fdebc81273af161e735f2eec22f10d26dd
+    require-addon: ^1.1.0
+  checksum: 3759114f821691f4f5f8295dc98e97fe98c7ee35f5da709299837790e01b3b2875af384811dcc6dae55898891cca670de216c5534fed6c64186bae659e9fec05
   languageName: node
   linkType: hard
 
@@ -8251,7 +8310,7 @@ __metadata:
     ffmpeg-static: 5.2.0
     levenshtein-edit-distance: 3.0.1
     prettier: 3.5.3
-    sodium-native: 3.4.1
+    sodium-native: 4.3.3
     ts-node: 10.9.2
     typescript: 5.1.6
   languageName: unknown
