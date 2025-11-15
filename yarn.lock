@@ -4762,15 +4762,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ffmpeg-static@npm:5.2.0":
-  version: 5.2.0
-  resolution: "ffmpeg-static@npm:5.2.0"
+"ffmpeg-static@npm:5.3.0":
+  version: 5.3.0
+  resolution: "ffmpeg-static@npm:5.3.0"
   dependencies:
     "@derhuerst/http-basic": ^8.2.0
     env-paths: ^2.2.0
     https-proxy-agent: ^5.0.0
     progress: ^2.0.3
-  checksum: 35af3dd1d957cc23f895bff054c3d4e40bcd4c50626149fd0b7b0909c34b4c2b196d038dd2713c1bb11d2a5f132e9ec67511a32407e1a7f12e015ffa39b12aeb
+  checksum: a3be5e95799ad5fbc96d1120b8ae9e2b0ed6bda3bae785c046ab6010a8b8cab8aafcce5aa824c6f718ef330e2d756116bc4e4d9f6bcdc8edfe81407fe32be17e
   languageName: node
   linkType: hard
 
@@ -8338,7 +8338,7 @@ __metadata:
     discord.js: 14.6.0
     dotenv: 16.6.1
     eslint: 8.57.1
-    ffmpeg-static: 5.2.0
+    ffmpeg-static: 5.3.0
     levenshtein-edit-distance: 3.0.1
     prettier: 3.6.2
     sodium-native: 3.4.1
