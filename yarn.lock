@@ -303,16 +303,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discordjs/voice@npm:0.13.0":
-  version: 0.13.0
-  resolution: "@discordjs/voice@npm:0.13.0"
+"@discordjs/voice@npm:0.19.0":
+  version: 0.19.0
+  resolution: "@discordjs/voice@npm:0.19.0"
   dependencies:
-    "@types/ws": ^8.5.3
-    discord-api-types: ^0.37.12
-    prism-media: ^1.3.4
-    tslib: ^2.4.0
-    ws: ^8.9.0
-  checksum: 4d3da879cb58ba82a6f274e7fd9ffc3beb120f48e6aadf767afb4a3539e77f40d40cd62677aaec6e9eb3819f6d3c112837d6fb237388ed3708c79f1f2310b8bc
+    "@types/ws": ^8.18.1
+    discord-api-types: ^0.38.16
+    prism-media: ^1.3.5
+    tslib: ^2.8.1
+    ws: ^8.18.3
+  checksum: 4e27d296ee80cf673079d2a8f06ffc8ce0e0811d663ec2302084638c8f98fc0a6d175779e35f3396068019857c96bb30e75efeaa6736309ca3defddd1c559fde
   languageName: node
   linkType: hard
 
@@ -1360,6 +1360,15 @@ __metadata:
   dependencies:
     "@types/node": "*"
   checksum: 3ec416ea2be24042ebd677932a462cf16d2080393d8d7d0b1b3f5d6eaa4a7387aaf0eefb99193c0bfd29444857cf2e0c3ac89899e130550dc6c14ada8a46d25e
+  languageName: node
+  linkType: hard
+
+"@types/ws@npm:^8.18.1":
+  version: 8.18.1
+  resolution: "@types/ws@npm:8.18.1"
+  dependencies:
+    "@types/node": "*"
+  checksum: 0331b14cde388e2805af66cad3e3f51857db8e68ed91e5b99750915e96fe7572e58296dc99999331bbcf08f0ff00a227a0bb214e991f53c2a5aca7b0e71173fa
   languageName: node
   linkType: hard
 
@@ -3098,7 +3107,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.38.37":
+"discord-api-types@npm:0.38.37, discord-api-types@npm:^0.38.16":
   version: 0.38.37
   resolution: "discord-api-types@npm:0.38.37"
   checksum: f9e99753b2b994ccc767d6b4138357d60227161bc85fba180de11f80c0ffba6623355b6e8bb3f4831f4a99bc4ccc59da61df1c4ef6696022e1fb019f4188e61a
@@ -7418,11 +7427,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prism-media@npm:^1.3.4":
-  version: 1.3.4
-  resolution: "prism-media@npm:1.3.4"
+"prism-media@npm:^1.3.5":
+  version: 1.3.5
+  resolution: "prism-media@npm:1.3.5"
   peerDependencies:
-    "@discordjs/opus": ^0.8.0
+    "@discordjs/opus": ">=0.8.0 <1.0.0"
     ffmpeg-static: ^5.0.2 || ^4.2.7 || ^3.0.0 || ^2.4.0
     node-opus: ^0.3.3
     opusscript: ^0.0.8
@@ -7435,7 +7444,7 @@ __metadata:
       optional: true
     opusscript:
       optional: true
-  checksum: 703be28c87b4694714a52a0ea84516b19d2e62e510d0f204efc074b044ad93dde00241d4b4741c25aa2e27a00e3b472e60ad0f6c94e88710f0827dc63889373a
+  checksum: a4fbe5c91f2aa5aca6e0d7fb72c37627db814f59b2ffd702aced11d4cc6f6f15022a5830df48fc008e805f2d1fe79305e5d1b091307981a0083edf7223418679
   languageName: node
   linkType: hard
 
@@ -8327,7 +8336,7 @@ __metadata:
   dependencies:
     "@discordjs/opus": 0.10.0
     "@discordjs/rest": 1.7.1
-    "@discordjs/voice": 0.13.0
+    "@discordjs/voice": 0.19.0
     "@slashnephy/eslint-config": 2.3.204
     "@slashnephy/prettier-config": 1.0.73
     "@slashnephy/typescript-extension": 0.2.3
@@ -8902,6 +8911,13 @@ __metadata:
   version: 2.5.0
   resolution: "tslib@npm:2.5.0"
   checksum: ae3ed5f9ce29932d049908ebfdf21b3a003a85653a9a140d614da6b767a93ef94f460e52c3d787f0e4f383546981713f165037dc2274df212ea9f8a4541004e1
+  languageName: node
+  linkType: hard
+
+"tslib@npm:^2.8.1":
+  version: 2.8.1
+  resolution: "tslib@npm:2.8.1"
+  checksum: e4aba30e632b8c8902b47587fd13345e2827fa639e7c3121074d5ee0880723282411a8838f830b55100cbe4517672f84a2472667d355b81e8af165a55dc6203a
   languageName: node
   linkType: hard
 
@@ -9550,6 +9566,21 @@ __metadata:
     utf-8-validate:
       optional: true
   checksum: feb3eecd2bae82fa8a8beef800290ce437d8b8063bdc69712725f21aef77c49cb2ff45c6e5e7fce622248f9c7abaee506bae0a9064067ffd6935460c7357321b
+  languageName: node
+  linkType: hard
+
+"ws@npm:^8.18.3":
+  version: 8.18.3
+  resolution: "ws@npm:8.18.3"
+  peerDependencies:
+    bufferutil: ^4.0.1
+    utf-8-validate: ">=5.0.2"
+  peerDependenciesMeta:
+    bufferutil:
+      optional: true
+    utf-8-validate:
+      optional: true
+  checksum: d64ef1631227bd0c5fe21b3eb3646c9c91229402fb963d12d87b49af0a1ef757277083af23a5f85742bae1e520feddfb434cb882ea59249b15673c16dc3f36e0
   languageName: node
   linkType: hard
 
