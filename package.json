@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@discordjs/opus": "0.10.0",
-    "@discordjs/rest": "1.7.1",
+    "@discordjs/rest": "2.6.0",
     "@discordjs/voice": "0.13.0",
     "@slashnephy/typescript-extension": "0.2.3",
     "discord-api-types": "0.38.37",
